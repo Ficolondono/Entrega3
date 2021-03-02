@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cuadro</title>
+	<div class="fede"><img src="Fede.png"></div>
+	<style > 
+		body{
+			background-color: #F9FFFC;		}
+			.enlace{
+	text-decoration: none;
+	list-style: none;
+	text-align: center;
+	font-family: Aharoni;
+	font-size: 20px;
+	border-radius:10px 50px 10px 50px;
+	background-color: #87F0B3;
+	color: #052E02;
+	display: block;
+	width: 120px;
+	height: 30px;
+	align-content: center;
+	margin-top: 430px;
+	margin-left: 590px;
+}
+		.colora{
+			position: absolute;
+			margin-top: 5%;
+			margin-left: 25%;
+			width: 50%;
+			height: 30%;
+			background: #A8FB8E;
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+		}
+		.colorb{
+			position: absolute;
+			margin-top: 5%;
+			margin-left: 25%;
+			width: 50%;
+			height: 30%;
+			background: #8EBCFB;
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+		}
+		.color{
+			position: absolute;
+			margin-top: 5%;
+			margin-left: 25%;
+			width: 50%;
+			height: 30%;
+			background: #075402;
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+		}
+		.colorc{
+			position: absolute;
+			margin-top: 5%;
+			margin-left: 25%;
+			width: 50%;
+			height: 30%;
+			background: #D1F571;
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+		}
+		.mostrar{
+			position: absolute;
+			margin-top: 10%;
+			margin-left: -12%;
+			width: 20%;
+			height: 20%;
+			z-index: 50;
+			background-color: transparent;
+			text-align: center;
+			border: transparent solid;
+			font-size: 24px;
+		}
+		.boton{
+			position: absolute;
+			margin-top: 30%;
+			margin-left: 29.5%;
+			width: 20%;
+			height: 20%;
+		}
+		.caja{
+			position: absolute;
+			margin-top: 23%;
+			margin-left: 37.5%;
+			width: 20%;
+			height: 20%;
+		}
+		.frase{
+			font-size: 24px;
+			text-align: center;
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+		}
+	</style>
+</head>
+    <div class="fondo"></div>
+	<div class="cuadro" id="cuadro"></div>
+	<br><p><h2><center>Ingrese la frase que desea mostrar en la caja de texto, luego de click en ver. <br>Después podrá interactuar con los colores del diseño, con las teclas A, B y C. </p>
+	<div class="caja"><input type="text" name="frase" id="frase" class="frase" style="width: 328px; height: 68px" size="32"></div>
+	<div class="boton"><input type="button" name="boton" value="ver" class="boton" onclick="mostrar();" style="width: 128px; height: 30px; margin-top: 10px; color: green; background-color: #87F0B3;" size="32"></div>	
+	<div class="tran"><input type="text" name="mostrar" id="mostrar" class="mostrar" style="width: 328px; height: 68px" size="32"></div>
+
+
+
+<body onkeypress="color()">
+	<div id="hola"	class="color"> </div>
+
+	<script>
+		function color(){
+		if(event.code=="KeyA")
+		{
+	 	var n4=document.getElementById('hola');
+	 	n4.className='colora';
+	    }
+
+	    if(event.code=="KeyB")
+		{
+	 	var n4=document.getElementById('hola');
+	 	n4.className='colorb';
+	    }
+
+	    if(event.code=="KeyC")
+		{
+	 	var n4=document.getElementById('hola');
+	 	n4.className='colorc';
+	    }
+	    }
+
+	    function mostrar()
+		{
+			var Paramos=document.getElementById("frase").value;
+			document.getElementById("mostrar").value=Paramos;
+		}
+	</script>
+	<br><br>
+	<div class="enlace"><a href="">Volver</a></div>	
+</body>
+</html>
